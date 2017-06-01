@@ -423,7 +423,7 @@ class MusicBot(discord.Client):
                     self.autoplaylist_counter = 0
                     shuffle(self.autoplaylist)
                 song_url = self.autoplaylist[self.autoplaylist_counter]
-                autoplaylist_counter += 1
+                self.autoplaylist_counter += 1
                 info = await self.downloader.safe_extract_info(player.playlist.loop, song_url, download=False, process=False)
 
                 if not info:
